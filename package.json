@@ -1,0 +1,11 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Marie Semenovykh",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "^5.94.0"
+  }
+}
