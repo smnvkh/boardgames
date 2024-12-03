@@ -6,24 +6,25 @@
     <title>Document</title>
   </head>
   <body class="index">
-    <div></div>
-    <nav><a href="articles/about-games.html">О настольных играх</a></nav>
     <div class="mainSection">
+      <nav>
+        <a href="articles/about-games.html">О настольных играх</a>
+      </nav>
       <div class="mainInfo">
-        <h1>Медиа о настольных играх</h1>
+        <h1>Каждая игра — это новая история. Погрузись в свою</h1>
         <form
           id="my-form"
           action="https://formspree.io/f/xvgopnyj"
           method="POST"
         >
           <input type="email" name="email" placeholder="Введите почту" />
-
           <button id="my-form-button">Отправить</button>
           <p id="my-form-status"></p>
         </form>
       </div>
       <div class="model"></div>
     </div>
+
     <!-- <h1>Сайт о настольных играх</h1>
 
     <h2>Разделы</h2>
@@ -35,8 +36,8 @@
 
     <h2>Примеры настольных игр</h2>
     <p><a href="boardgames/gloomhaven.html">Gloomhaven</a></p>
-> -->
 
+     -->
     <script>
       var form = document.getElementById('my-form')
 
@@ -62,13 +63,13 @@
                     .map((error) => error['message'])
                     .join(', ')
                 } else {
-                  status.innerHTML = 'Ой, попробуйте заполнить форму еще раз!'
+                  status.innerHTML = 'Ой, попробуйте заполнить форму ещё раз.'
                 }
               })
             }
           })
           .catch((error) => {
-            status.innerHTML = 'Ой, попробуйте заполнить форму еще раз!'
+            status.innerHTML = 'Ой, попробуйте заполнить форму ещё раз.'
           })
       }
       form.addEventListener('submit', handleSubmit)

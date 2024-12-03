@@ -1,17 +1,51 @@
 body.index {
-  h2 {
-    font-weight: 500;
-    font-size: 36px;
-  }
+  background-color: #181819;
+  width: 100%;
+  height: 100%;
+  display: flex;
 
   .mainSection {
     display: flex;
-    height: 10vh;
+    width: 1260px;
+    height: 700px;
+    margin: 45px auto;
     align-items: center;
+    background-image: url('../images/index/background.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+
+    nav {
+      position: absolute;
+      border: 1px solid white;
+      border-radius: 50px;
+      top: 3vh;
+      right: 3vw;
+      width: 20%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      a {
+        width: 100%;
+        border-radius: 50px;
+        padding: 18px 0;
+        color: white;
+        text-decoration: none;
+        transition: 0.8s;
+        text-align: center;
+
+        &:hover {
+          color: black;
+          transition: 0.3s;
+          background-color: white;
+        }
+      }
+    }
 
     .mainInfo {
       width: 50%;
-      padding: 10px 20px;
+      padding-left: 60px;
       display: flex;
       flex-direction: column;
       gap: 36px;
@@ -19,54 +53,30 @@ body.index {
       h1 {
         font-weight: 700;
         font-size: 36px;
-      }
-
-      input {
-        margin-right: 12px;
+        line-height: 1.5;
       }
 
       input,
       button {
-        padding: 18px, 24px;
+        padding: 10px 24px;
         font-size: 18px;
         border-radius: 16px;
         border: 1px solid #eee;
         transition: 0.8s;
       }
-
       button:hover {
         background-color: cornflowerblue;
         color: white;
         transition: 0.2s;
+      }
+      input {
+        margin-right: 12px;
       }
 
       #my-form-status {
         margin: 10px 24px;
         color: grey;
         font-size: 12px;
-      }
-    }
-  }
-
-  nav {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    padding: 0 20px;
-    justify-content: space-around;
-    align-items: center;
-
-    div {
-      width: 1px;
-    }
-    a {
-      color: grey;
-      text-decoration: none;
-      transition: 0.8s;
-
-      &:hover {
-        color: black;
-        transition: 0.3s;
       }
     }
   }
