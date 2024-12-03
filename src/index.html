@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="index">
+    <div></div>
+    <nav><a href="articles/about-games.html">О настольных играх</a></nav>
+    <div class="mainSection">
+      <div class="mainInfo">
+        <h1>Медиа о настольных играх</h1>
+        <form
+          id="my-form"
+          action="https://formspree.io/f/xvgopnyj"
+          method="POST"
+        >
+          <input type="email" name="email" placeholder="Введите почту" />
+
+          <button id="my-form-button">Отправить</button>
+          <p id="my-form-status"></p>
+        </form>
+      </div>
+      <div class="model"></div>
+    </div>
+    <!-- <h1>Сайт о настольных играх</h1>
+
+    <h2>Разделы</h2>
+    <p><a href="articles.html">Статьи</a></p>
+    <p><a href="boardgames.html">Игры</a></p>
+
+    <h2>Примеры статей</h2>
+    <p><a href="articles/about-games.html">О настольных играх</a></p>
+
+    <h2>Примеры настольных игр</h2>
+    <p><a href="boardgames/gloomhaven.html">Gloomhaven</a></p>
+> -->
+
+    <script>
+      var form = document.getElementById('my-form')
+
+      async function handleSubmit(event) {
+        event.preventDefault()
+        var status = document.getElementById('my-form-status')
+        var data = new FormData(event.target)
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: 'application/json'
+          }
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.innerHTML = 'Спасибо за подписку!'
+              form.reset()
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data['errors']
+                    .map((error) => error['message'])
+                    .join(', ')
+                } else {
+                  status.innerHTML = 'Ой, попробуйте заполнить форму еще раз!'
+                }
+              })
+            }
+          })
+          .catch((error) => {
+            status.innerHTML = 'Ой, попробуйте заполнить форму еще раз!'
+          })
+      }
+      form.addEventListener('submit', handleSubmit)
+    </script>
+  </body>
+</html>

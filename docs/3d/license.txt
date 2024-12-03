@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dices
+* source:	https://sketchfab.com/3d-models/dices-a96b6bcb9e844b318ce6a632b60a339a
+* author:	Omer Bhatti (https://sketchfab.com/OmerBhatti)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dices" (https://sketchfab.com/3d-models/dices-a96b6bcb9e844b318ce6a632b60a339a) by Omer Bhatti (https://sketchfab.com/OmerBhatti) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

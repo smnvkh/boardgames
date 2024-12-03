@@ -1,0 +1,73 @@
+body.index {
+  h2 {
+    font-weight: 500;
+    font-size: 36px;
+  }
+
+  .mainSection {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+
+    .mainInfo {
+      width: 50%;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+
+      h1 {
+        font-weight: 700;
+        font-size: 36px;
+      }
+
+      input {
+        margin-right: 12px;
+      }
+
+      input,
+      button {
+        padding: 18px, 24px;
+        font-size: 18px;
+        border-radius: 16px;
+        border: 1px solid #eee;
+        transition: 0.8s;
+      }
+
+      button:hover {
+        background-color: cornflowerblue;
+        color: white;
+        transition: 0.2s;
+      }
+
+      #my-form-status {
+        margin: 10px 24px;
+        color: grey;
+        font-size: 12px;
+      }
+    }
+  }
+
+  nav {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+      width: 1px;
+    }
+    a {
+      color: grey;
+      text-decoration: none;
+      transition: 0.8s;
+
+      &:hover {
+        color: black;
+        transition: 0.3s;
+      }
+    }
+  }
+}
