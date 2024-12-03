@@ -5,39 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body class="index">
-    <div class="mainSection">
+    <div class="wrapper">
       <nav>
-        <a href="articles/about-games.html">О настольных играх</a>
-      </nav>
-      <div class="mainInfo">
-        <h1>Каждая игра — это новая история. Погрузись в свою</h1>
+        <h1>Сайт о настольных играх</h1>
+
+        <h2>Разделы</h2>
+        <p><a href="articles.html">Статьи</a></p>
+        <p><a href="boardgames.html">Игры</a></p>
+
+        <h2>Примеры статей</h2>
+        <p><a href="articles/about-games.html">О настольных играх</a></p>
+
+        <h2>Примеры настольных игр</h2>
+        <p><a href="boardgames/gloomhaven.html">Gloomhaven</a></p>
         <form
           id="my-form"
-          action="https://formspree.io/f/xvgopnyj"
+          action="https://formspree.io/f/xeoqjqqg"
           method="POST"
         >
+          <!-- <label>Email:</label> -->
           <input type="email" name="email" placeholder="Введите почту" />
+
+          <!-- <label>Message:</label>
+      <input type="text" name="message" /> -->
+
           <button id="my-form-button">Отправить</button>
           <p id="my-form-status"></p>
         </form>
-      </div>
+      </nav>
       <div class="model"></div>
     </div>
 
-    <!-- <h1>Сайт о настольных играх</h1>
+    <section class="categoryGames">
+      <h2>Во что поиграть?</h2>
+      <div class="games">
+        <div class="cardGame sizeM">
+          <img src="images/cardGames/gloomhaven.png" alt="" />
+          <div class="cardInfo">
+            <div class="cardTags">
+              <div class="cardTag">
+                <div class="timeIcon icon"></div>
+                <p>30-120</p>
+              </div>
+              <div class="cardTag">
+                <div class="playersIcon icon"></div>
+                <p>1-4</p>
+              </div>
+            </div>
+            <h3>Gloomhaven. Мрачная гавань</h3>
+            <p>
+              Невероятная по масштабу, хардкорная тактическая настольная игра,
+              которая отправит вас в кооперативное приключение по подземельям и
+              руинам жестокого и сурового мира, где правда всегда за сильным.
+            </p>
+          </div>
+        </div>
+        <div class="cardGame">
+          <img src="images/cardGames/arkhem.png" alt="" />
+          <div class="cardTags">
+            <div class="cardTag">
+              <div class="timeIcon icon"></div>
+              <p>60-120</p>
+            </div>
+            <div class="cardTag">
+              <div class="playersIcon icon"></div>
+              <p>1-2</p>
+            </div>
+          </div>
+          <h3>Ужас Аркхэма</h3>
+        </div>
+        <div class="cardGame">
+          <img src="images/cardGames/everdel.png" alt="" />
+          <div class="cardTags">
+            <div class="cardTag">
+              <div class="timeIcon icon"></div>
+              <p>40-80</p>
+            </div>
+            <div class="cardTag">
+              <div class="playersIcon icon"></div>
+              <p>1-4</p>
+            </div>
+          </div>
+          <h3>Эверделл</h3>
+        </div>
+        <div class="cardGame">
+          <img src="images/cardGames/karkasson.png" alt="" />
+          <div class="cardTags">
+            <div class="cardTag">
+              <div class="timeIcon icon"></div>
+              <p>35+</p>
+            </div>
+            <div class="cardTag">
+              <div class="playersIcon icon"></div>
+              <p>2-5</p>
+            </div>
+          </div>
+          <h3>Каркассон</h3>
+        </div>
+        <div class="cardGame">
+          <img src="images/cardGames/bunker.png" alt="" />
+          <div class="cardTags">
+            <div class="cardTag">
+              <div class="timeIcon icon"></div>
+              <p>30-60</p>
+            </div>
+            <div class="cardTag">
+              <div class="playersIcon icon"></div>
+              <p>4-16</p>
+            </div>
+          </div>
+          <h3>Бункер</h3>
+        </div>
+        <div class="cardGame sizeM">
+          <img src="images/cardGames/srednevekovie.png" alt="" />
+          <div class="cardInfo">
+            <div class="cardTags">
+              <div class="cardTag">
+                <div class="timeIcon icon"></div>
+                <p>20-30</p>
+              </div>
+              <div class="cardTag">
+                <div class="playersIcon icon"></div>
+                <p>3-6</p>
+              </div>
+            </div>
+            <h3>Страдающее средневековье</h3>
+            <p>
+              Жизнь средневековых людей тяжела и полна страданий. Воины уходят в
+              Крестовые Походы, различные Эпидемии буквально выкашивают на корню
+              целые поселения, а тех немногих, кто остался в живых, с радостью
+              сжигает инквизиция.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Разделы</h2>
-    <p><a href="articles.html">Статьи</a></p>
-    <p><a href="boardgames.html">Игры</a></p>
-
-    <h2>Примеры статей</h2>
-    <p><a href="articles/about-games.html">О настольных играх</a></p>
-
-    <h2>Примеры настольных игр</h2>
-    <p><a href="boardgames/gloomhaven.html">Gloomhaven</a></p>
-
-     -->
     <script>
       var form = document.getElementById('my-form')
 
