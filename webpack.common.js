@@ -9,7 +9,8 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    index: './src/index.js'
+    index: './src/index.js',
+    dices: './src/javascripts/dices.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -82,10 +83,10 @@ module.exports = {
         }
       },
       {
-        test: /\.(ttf|otf)$/i,
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]'
+        test: /\.(ttf|otf|woff|woff2)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]'
         }
       }
     ]
@@ -99,30 +100,34 @@ module.exports = {
     // Index
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      chunks: ['index', 'dices']
     }),
 
     // Страницы разделов
     new HtmlWebpackPlugin({
       template: './src/articles.html',
-      filename: './articles.html'
+      filename: './articles.html',
+      chunks: ['index']
     }),
-
     new HtmlWebpackPlugin({
       template: './src/boardgames.html',
-      filename: './boardgames.html'
+      filename: './boardgames.html',
+      chunks: ['index']
     }),
 
     // Страницы раздела статей / articles
     new HtmlWebpackPlugin({
       template: './src/articles/about-games.html',
-      filename: './articles/about-games.html'
+      filename: './articles/about-games.html',
+      chunks: ['index']
     }),
 
-    // Страницы раздела статей / boardgames
+    // Страницы раздела об играх / boardgames
     new HtmlWebpackPlugin({
       template: './src/boardgames/gloomhaven.html',
-      filename: './boardgames/gloomhaven.html'
+      filename: './boardgames/gloomhaven.html',
+      chunks: ['index']
     }),
 
     new CopyPlugin({

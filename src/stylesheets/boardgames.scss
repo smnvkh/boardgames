@@ -1,0 +1,163 @@
+.boardgames {
+  nav,
+  section {
+    width: 100%;
+    padding: 0 1rem;
+    background-color: #f5f5f5;
+  }
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: 50px;
+
+    a {
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .cover {
+    border-radius: 0 0 2rem 2rem;
+
+    .coverImage {
+      width: 100%;
+      height: 500px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-image: url('../images/boardgames/gloomhaven/bg-gloomhaven.png');
+      border-radius: 1rem;
+    }
+
+    .coverInfo {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+
+      h1 {
+        width: 68%;
+        font-size: 6rem;
+        font-weight: 700;
+      }
+      .coverInfoDescription {
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1rem 0 0;
+        gap: 1rem;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .coverInfoDescription_age {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+
+        .icon {
+          width: 36px;
+          height: 36px;
+          background-size: contain;
+          background-repeat: no-repeat;
+
+          &.playersIcon {
+            background-image: url('https://img.icons8.com/material-rounded/48/user-group-man-woman.png');
+          }
+          &.timeIcon {
+            background-image: url('https://img.icons8.com/ios-glyphs/60/time--v1.png');
+          }
+        }
+      }
+    }
+  }
+  article {
+    width: 996px;
+    margin: 4rem auto;
+
+    .lid {
+      width: 100%;
+      background-color: #f5f5f5;
+      font-size: 1.2rem;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+
+    .lid + section {
+      justify-content: flex-end;
+    }
+
+    section {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      margin: 2rem;
+
+      h2 {
+        font-weight: 700;
+        font-size: 2rem;
+        width: 20%;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+      h2 + p,
+      .textWrapper {
+        width: 76%;
+      }
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    .cover {
+      .coverInfo {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .cover {
+      .coverInfo {
+        flex-direction: column-reverse;
+        padding: 0.5rem 0 1.5rem 0;
+
+        h1 {
+          font-size: 2rem;
+        }
+        .coverInfoDescription {
+          width: 100%;
+          padding: 0 0 1rem 0;
+        }
+      }
+    }
+    article {
+      width: 100%;
+      section {
+        flex-direction: column;
+        margin: 0;
+        padding: 0 0.5rem;
+
+        h2 {
+          margin-bottom: 1.2rem;
+          width: 100%;
+        }
+        h2 + p,
+        .textWrapper {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
