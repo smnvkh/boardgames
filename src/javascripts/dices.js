@@ -1,5 +1,4 @@
 import * as THREE from 'three'
-// import * as TWEEN from 'tween.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 // import { RectAreaLightUniformsLib } from 'RectAreaLightUniformsLib'
