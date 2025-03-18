@@ -69,3 +69,17 @@
 .A_ResultIMG {
   width: 20%;
 }
+
+.dark {
+  .S_Test {
+    background-color: rgb(35, 35, 35);
+  }
+
+  .O_TestBlock {
+    background-color: rgb(35, 35, 35);
+  }
+
+  .A_NumberOfQuestion {
+    color: cornflowerblue;
+  }
+}
