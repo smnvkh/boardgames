@@ -62796,7 +62796,6 @@ const FXAAShader = {
 
 ;// CONCATENATED MODULE: ./src/javascripts/dices.js
 
-// import * as TWEEN from 'tween.js'
 
 
 // import { RectAreaLightUniformsLib } from 'RectAreaLightUniformsLib'
