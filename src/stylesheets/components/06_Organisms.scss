@@ -1,0 +1,37 @@
+/*_________________________ADC_Dictionary_______*/
+.O_Story {
+  width: 320px;
+  height: 568px;
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding: 52px 10px 22px 10px;
+
+  .A_AnswerMessage {
+    margin-left: 32px;
+  }
+  .A_Question {
+    margin-bottom: 10px;
+    align-self: flex-end;
+  }
+}
+.O_ArticleCard {
+  display: block;
+  padding: 1rem;
+  width: 30%;
+  background-color: #f2f2f2;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: black;
+}
+.O_Multiselect {
+  width: 60%;
+  min-height: 20vw;
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

@@ -10,7 +10,12 @@ const path = require('path')
 module.exports = {
   entry: {
     index: './src/index.js',
-    dices: './src/javascripts/dices.js'
+    dices: './src/javascripts/dices.js',
+    swiper: './src/javascripts/swiper.js',
+    dictionary: './src/dictionary/dictionary.js',
+    jsBasic: './src/jsBasic/jsBasic.js',
+    test: './src/tests/test1.js',
+    filterCards: './src/javascripts/filterCards.js'
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -108,7 +113,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/articles.html',
       filename: './articles.html',
-      chunks: ['index']
+      chunks: ['index', 'swiper', 'filterCards']
     }),
     new HtmlWebpackPlugin({
       template: './src/boardgames.html',
@@ -130,6 +135,27 @@ module.exports = {
       chunks: ['index']
     }),
 
+    // ADC Dictionary
+    new HtmlWebpackPlugin({
+      template: './src/dictionary/dictionary.html',
+      filename: './dictionary/dictionary.html',
+      chunks: ['dictionary']
+    }),
+
+    // jsBasic
+    new HtmlWebpackPlugin({
+      template: './src/jsBasic/jsBasic.html',
+      filename: './jsBasic/jsBasic.html',
+      chunks: ['jsBasic']
+    }),
+
+    // Тесты
+    new HtmlWebpackPlugin({
+      template: './src/tests/test1.html',
+      filename: './tests/test1.html',
+      chunks: ['index', 'test']
+    }),
+
     new CopyPlugin({
       patterns: [
         {
@@ -141,7 +167,7 @@ module.exports = {
           to: path.resolve(__dirname, './docs/3d')
         }
       ]
-    })
+    }),
 
     // Article
     // new HtmlWebpackPlugin({
@@ -150,14 +176,14 @@ module.exports = {
     // }),
 
     // Partials
-    // new HtmlWebpackPartialsPlugin([
-    //   {
-    //     path: path.join(__dirname, './src/partials/analytics.html'),
-    //     location: 'analytics',
-    //     template_filename: '*',
-    //     priority: 'replace'
-    //   }
-    // ])
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/footer.html'),
+        location: 'footer',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ])
   ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()]

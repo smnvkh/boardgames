@@ -1,0 +1,71 @@
+.S_Test {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.A_TestTitle {
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.O_TestBlock {
+  width: 80%;
+  padding: 1.6rem;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 2px 2px 4px 0px rgba(34, 60, 80, 0.1);
+}
+
+.C_Answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.A_NumberOfQuestion {
+  color: cornflowerblue;
+}
+
+.A_Question {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.A_AnswerText {
+  transition: all 0.3s ease;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  border: 2px solid cornflowerblue;
+
+  &:hover {
+    transition: all 0.6s ease;
+    background-color: cornflowerblue;
+    color: white;
+  }
+}
+
+.A_ResultCount {
+  color: cornflowerblue;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.A_Preview {
+  font-size: 1.2rem;
+}
+
+.A_ResultIMG {
+  width: 20%;
+}

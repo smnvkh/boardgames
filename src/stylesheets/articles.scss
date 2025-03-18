@@ -1,0 +1,114 @@
+.slider {
+  width: 98vw;
+  height: 60vw;
+  max-height: 420px;
+  margin: 0 auto;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      //   color: white;
+      content: '';
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-image: url(https://img.icons8.com/?size=100&id=85304&format=png&color=000000);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .swiper-button-next {
+      transform: rotate(180deg);
+    }
+
+    .swiper-pagination-bullet {
+      width: 0.6rem;
+      height: 0.6rem;
+
+      & .swiper-pagination-bullet-active {
+        background-color: white;
+      }
+    }
+
+    .slideLink {
+      // чтобы ссылку распространить на весь блок, надо повесить дисплей блок
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      text-decoration: none;
+      color: white;
+
+      &.firstSlide {
+        background-image: linear-gradient(
+          to top,
+          #505285 0%,
+          #585e92 12%,
+          #65689f 25%,
+          #7474b0 37%,
+          #7e7ebb 50%,
+          #8389c7 62%,
+          #9795d4 75%,
+          #a2a1dc 87%,
+          #b5aee4 100%
+        );
+      }
+
+      &.secondSlide {
+        background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(0, 0, 0, 0.15) 100%
+          ),
+          radial-gradient(
+              at top center,
+              rgba(255, 255, 255, 0.4) 0%,
+              rgba(0, 0, 0, 0.4) 120%
+            )
+            #989898;
+        background-blend-mode: multiply, multiply;
+      }
+
+      &.thirdSlide {
+        background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+      }
+
+      .articleInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .articleHeader {
+        font-size: 2rem;
+        font-weight: 500;
+        width: 80%;
+        text-align: center;
+      }
+
+      .articleTags {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        .articleTag {
+          border-radius: 10px;
+          border: 1px solid white;
+          backdrop-filter: blur(10px);
+          padding: 0.6rem 0.8rem;
+        }
+      }
+    }
+  }
+}

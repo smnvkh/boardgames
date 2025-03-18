@@ -1,0 +1,155 @@
+/*______Название страницы для удобной навигации______*/
+.A_ADCUser {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+    background-image: url(../../images/dictionary/A_ADCSymbol.svg);
+  }
+
+  &::after {
+    content: '';
+    width: 36px;
+    height: 24px;
+    background-image: url(../../images/dictionary/A_ADCUserTexting.svg);
+  }
+}
+
+.A_TestQuestion {
+  max-width: 70%;
+  width: fit-content;
+  color: #79ff39;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  font-size: 22px;
+  line-height: 1;
+  padding: 12px 18px;
+}
+.A_AnswerMessage {
+  width: 218px;
+  background-color: white;
+  color: black;
+  padding: 10px 12px;
+  font-size: 15px;
+  line-height: 1.16;
+  border-radius: 8px;
+}
+
+.A_Checkbox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+
+  &:checked ~ .A_Switch {
+    background-color: cornflowerblue;
+  }
+
+  &:checked ~ .A_Switch::before {
+    transform: translateX(26px);
+  }
+}
+
+.A_Switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eee;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    background-color: white;
+    transition: all 0.4s ease;
+  }
+}
+
+.A_ArticleHeader {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.A_FilterTag {
+  background-color: white;
+  color: cornflowerblue;
+  border: 2px solid cornflowerblue;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+
+  &.active {
+    background-color: cornflowerblue;
+    color: white;
+    font-weight: bold;
+  }
+  &:hover {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+.A_ArticleCardHeader {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+.A_MultiselectTitle {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.9rem;
+}
+.A_MultiselectCheckbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  opacity: 0;
+  z-index: 1;
+
+  &:checked ~ .M_SelectField {
+    display: block;
+  }
+
+  &:hover ~ .C_Chips {
+    border: 2px solid rgba(100, 148, 237, 0.7);
+  }
+}
+
+.A_MultiTag {
+  padding: 0.5rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+
+  &:hover {
+    color: black;
+    background-color: rgb(236, 242, 255);
+  }
+  &:checked {
+    color: white;
+    background-color: rgba(100, 148, 237, 0.7);
+  }
+}
+.A_Chip {
+  color: white;
+  background-color: rgba(100, 148, 237, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  border: none;
+}

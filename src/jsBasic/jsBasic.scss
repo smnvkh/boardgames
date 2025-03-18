@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  margin: 30px 0;
+}
+.style {
+  div {
+    height: 10vw;
+    width: 10vw;
+    border-radius: 100%;
+    background-color: cornflowerblue;
+    transition: all 0.6s ease;
+
+    &.coral {
+      background-color: coral;
+      transition: all 0.6s ease;
+    }
+  }
+}

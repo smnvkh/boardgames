@@ -1,0 +1,28 @@
+footer {
+  width: 100%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #323232;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    color: white;
+
+    h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    a {
+      color: rgb(190, 214, 255);
+    }
+  }
+}

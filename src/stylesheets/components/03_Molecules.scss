@@ -1,0 +1,25 @@
+.M_Switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+}
+
+.M_FilterTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.M_SelectField {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  max-height: 10rem;
+  overflow-y: auto;
+  border: 2px solid rgba(100, 148, 237, 0.7);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
